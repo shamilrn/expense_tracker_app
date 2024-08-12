@@ -14,7 +14,10 @@ class AddExpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.teal,
         title: Text('Add Expense'),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -47,6 +50,10 @@ class AddExpPage extends StatelessWidget {
                   Navigator.pop(context);
                 }
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+              ),
               child: Text('Add'),
             ),
           ],

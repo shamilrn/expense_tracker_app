@@ -20,20 +20,27 @@ class HomePage extends StatelessWidget{
        title: Text("Expense Tracker"),
        centerTitle: true,
      ),
-     body: Column(
-       mainAxisAlignment: MainAxisAlignment.center,
-       children: [
-         Text("Total Expense: \$${totalExpenses.toStringAsFixed(2)}",
-         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-         ),
-         SizedBox(height: 20,),
-         ElevatedButton(onPressed: (){
-           Navigator.push(context, MaterialPageRoute(builder: (context)=>ExpListPage()
+     body: Center(
+       child: Column(
+         mainAxisAlignment: MainAxisAlignment.center,
+         children: [
+           Text("Total Expense: \$${totalExpenses.toStringAsFixed(2)}",
+           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
            ),
-           );
-         }, 
-             child: Text("View Expenses"))
-       ],
+           SizedBox(height: 20,),
+           ElevatedButton(onPressed: (){
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>ExpListPage()
+             ),
+             );
+           },
+             style: ElevatedButton.styleFrom(
+               backgroundColor: Colors.teal,
+               foregroundColor: Colors.white,
+             ),
+               child: Text("View Expenses"),
+           ),
+         ],
+       ),
      ),
    );
   }

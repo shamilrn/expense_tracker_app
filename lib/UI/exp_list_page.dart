@@ -10,7 +10,10 @@ class ExpListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.teal,
         title: Text("Expense List"),
+        centerTitle: true,
       ),
       body: Consumer<ExpProvider>(
         builder: (context, provider, child) {

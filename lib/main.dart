@@ -55,8 +55,16 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => GetIt.instance<ExpProvider>(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Expense Tracker',
-        theme: ThemeData(primarySwatch: Colors.blue),
+        theme: ThemeData(primarySwatch: Colors.blue,
+          floatingActionButtonTheme: const FloatingActionButtonThemeData(
+            backgroundColor: Colors.teal,
+            foregroundColor: Colors.white,
+            // hoverColor: Colors.red,
+            // splashColor: Colors.white,
+          ),
+        ),
         home: HomePage(),
       ),
     );
